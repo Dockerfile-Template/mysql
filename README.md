@@ -9,3 +9,7 @@ In init-db.sql I created a user for mysql and granted full access to mysql to th
 
 ## docker-compose
 1. volumes: data in mysql will be saved in the data folder
+### Run docker-compose
+1. Build iamge: `docker-compose build --no-cache`
+2. Delete images that are no longer in use: `docker image prune`
+3. Run docker: `docker-compose up`
