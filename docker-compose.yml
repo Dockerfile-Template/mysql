@@ -4,7 +4,7 @@ services:
     build: .
     image: db
     ports:
-      - "2014:3306"
+      - "[ex_port]:3306"
     networks:
       - network
     volumes:
