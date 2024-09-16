@@ -5,18 +5,12 @@ services:
     image: db
     ports:
       - "[ex_port]:3306"
-    networks:
-      - network
     volumes:
       - ./data:/var/lib/mysql
     tty: true
     restart: always
     healthcheck:
-      test: ["CMD", "echo", "ok"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
       timeout: 100s
       retries: 6
-
-networks:
-  network:
-    driver: bridge
