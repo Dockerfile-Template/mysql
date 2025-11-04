@@ -2,7 +2,7 @@
 
 ## Dockerfile
 1. `COPY` command to add a file that runs mysql commands during the mysql creation process
-2. `RUN` and `USER` commands to create a new user on the mysql image (you can omit these two commands if running on windows operating system)
+2. `RUN` and `USE` commands to create a new user on the mysql image (you can omit these two commands if running on windows operating system)
 
 **NOTE:**
 In init-db.sql I created a user for mysql and granted full access to mysql to this user
@@ -10,6 +10,6 @@ In init-db.sql I created a user for mysql and granted full access to mysql to th
 ## docker-compose
 1. volumes: data in mysql will be saved in the data folder
 ### Run docker-compose
-1. Build iamge: `docker-compose build --no-cache`
+1. Build image: `docker-compose build --no-cache`
 2. Delete images that are no longer in use: `docker image prune`
 3. Run docker: `docker-compose up`
